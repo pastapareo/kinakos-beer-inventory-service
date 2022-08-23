@@ -1,7 +1,7 @@
-package guru.sfg.beer.inventory.service.bootstrap;
+package com.pastapareo.beer.inventory.service.bootstrap;
 
-import guru.sfg.beer.inventory.service.domain.BeerInventory;
-import guru.sfg.beer.inventory.service.repositories.BeerInventoryRepository;
+import com.pastapareo.beer.inventory.service.domain.BeerInventory;
+import com.pastapareo.beer.inventory.service.repositories.BeerInventoryRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
@@ -33,6 +33,7 @@ public class BeerInvntoryBootstrap implements CommandLineRunner {
     }
 
     private void loadInitialInv() {
+        System.out.println("Loading beers");
         beerInventoryRepository.save(BeerInventory
                 .builder()
                 .beerId(BEER_1_UUID)
